@@ -1,7 +1,7 @@
-import CarControler from "./components/carControler.js";
-import HouseControler from "./components/houseControler.js";
-import JobControler from "./components/jobControler.js";
-import AddControler from "./components/addControler.js";
+import CarControler from './components/cars/carControler.js'
+import HouseControler from './components/houses/houseControler.js'
+import JobControler from './components/jobs/jobControler.js'
+//import AddControler from "./components/junk/addControler.js/index.js";
 
 
 
@@ -11,11 +11,11 @@ import AddControler from "./components/addControler.js";
 
 class App {
   constructor() {
-    this.controlers = {
-      carControler: new CarControler(),
-      houseControler: new HouseControler(),
-      jobControler: new JobControler(),
-      addControler: new AddControler()
+    this.controllers = {
+      carController: new CarControler(),
+      houseController: new HouseControler(),
+      jobController: new JobControler(),
+      //addControler: new AddControler()
     }
   }
 }

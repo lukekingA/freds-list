@@ -1,26 +1,25 @@
-let id = 1
-
-
 export default class Car {
   constructor(data) {
-    this.type = 'cars';
-    this.id = id;
+    //this.type = 'cars';
+    this._id = data._id;
+    this.make = data.make
+    this.model = data.model
     this.price = data.price;
-    this.title = data.title;
-    this.img = data.img;
+    this.year = data.year
+    this.imgUrl = data.imgUrl;
     this.description = data.description;
-    id++
+
   }
   getTemplate() {
     return `
-   <div class="card col-3">
-        <img class="card-img-top" src=${this.img} alt="Card image cap">
+   <div class="card col-12 col-sm-4">
+        <img class="card-img-top" src=${this.imgUrl} alt="Card image cap">
         <div class="card-body">
-          <h4 class="card-title">${this.title}</h4>
+          <h4 class="card-title">${this.year} ${this.make} ${this.model}</h4>
           <p class="card-text">
             ${this.description} -- ${this.price}
           </p>
-          <button onclick=" app.controlers.carControler.deleteCar(${this.type},${this.id})">delete</button>
+          <button onclick=" app.controlers.carControler.deleteCar('${this._id}')">delete</button>
         </div>
       </div>`
   }

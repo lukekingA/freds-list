@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Fred's List</title>
+  <link href="https://fonts.googleapis.com/css?family=Pridi" rel="stylesheet">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style.css">
@@ -19,36 +21,29 @@
         <p>Boise</p>
       </div>
     </header>
+    <section class="row">
+      <div class="col my-3">
+        <button onclick="app.controllers.carController.getCars()" class="btn btn-dark text-light mr-2">Cars</button>
+        <button onclick="app.controllers.jobController.getJobs()" class="btn btn-dark text-light mr-2">Jobs</button>
+        <button onclick="app.controllers.houseController.getHouses()" class="btn btn-dark text-light">Houses</button>
+      </div>
+    </section>
     <section class="row w-100">
-      <div class="col">
-        <form onsubmit="app.controlers.addControlers.addItem(event)">
-          <label for="cat-select">Choose Catagory</label>
-          <select name="type" id="cat-select">
-            <option value="">Choose a Catagory</option>
-            <option value="houses">Houses</option>
-            <option value="cars">Cars</option>
-            <option value="jobs">Jobs</option>
-          </select>
-          <input type="text" name="title" placeholder=" title">
-          <input type="text" name="description" placeholder="description">
-          <input type="number" name="price" placeholder="price">
-          <input type="url" name="img" placeholder="#">
-          <button type="submit">Submit</button>
-        </form>
+      <div id="available-form" class="col my-3">
+
       </div>
     </section>
     <main class="row">
       <div id="app" class="col">
-        <div class="row" id="available-cars"></div>
-        <div class="row" id="available-houses"></div>
-        <div class="row" id="available-jobs"></div>
+        <div class="row" id="available-items"></div>
+
       </div>
     </main>
     <footer class="row w-100">
       <div class="col"></div>
     </footer>
   </div>
-
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script type="module" src="app/main.js"></script>
 </body>
 

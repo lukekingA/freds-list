@@ -16,4 +16,6 @@ export default class AddController {
     _ds.addItem(type, rawData)
     form.reset()
   }
+
+
 }
