@@ -19,7 +19,7 @@ export default class Job {
             ${this.description}
           </p>
           <p>${this.hours}/ day -- ${this.rate}/hr</p>
-          <button onclick=" app.controlers.jobControler.deleteJob('${this._id}')">delete</button>
+          <button onclick=" app.controllers.jobController.deleteJob('${this._id}')">delete</button>
         </div>
       </div>`
   }

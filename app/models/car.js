@@ -19,7 +19,7 @@ export default class Car {
           <p class="card-text">
             ${this.description} -- ${this.price}
           </p>
-          <button onclick=" app.controlers.carControler.deleteCar('${this._id}')">delete</button>
+          <button onclick=" app.controllers.carController.deleteCar('${this._id}')">delete</button>
         </div>
       </div>`
   }

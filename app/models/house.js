@@ -20,7 +20,7 @@ export default class House {
           <p class="card-text">
             ${this.description} -- ${this.price}
           </p>
-          <button onclick=" app.controlers.houseControler.deleteHouse('${this._id}')">Delete</button>
+          <button onclick=" app.controllers.houseController.deleteHouse('${this._id}')">Delete</button>
         </div>
       </div>`
   }

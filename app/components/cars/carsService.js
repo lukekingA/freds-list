@@ -33,7 +33,7 @@ export default class Cars {
 
   addCar(data) {
     // let car = new Car(data)
-    apiCars.post(data).then(res => {
+    apiCars.post('', data).then(res => {
       this.getApiCars()
     })
   }

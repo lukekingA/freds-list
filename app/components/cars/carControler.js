@@ -37,10 +37,10 @@ export default class CarControler {
     e.preventDefault()
     let form = e.target
     let rawData = {
+      make: form.model.value,
       model: form.make.value,
-      make: form.make.value,
-      price: form.price.value,
-      year: form.year.value,
+      price: parseInt(form.price.value),
+      year: parseInt(form.year.value),
       imgUrl: form.imgUrl.value,
       description: form.description.value
     }
