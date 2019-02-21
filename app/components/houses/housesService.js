@@ -32,12 +32,13 @@ export default class Houses {
   }
 
   addHouse(data) {
-    apiHouses.post(data).then(res => {
+    apiHouses.post('', data).then(res => {
+
       this.getApiHouses()
     })
   }
 
-  getApiHouses(url = '') {
+  getApiHouses() {
     apiHouses.get().then(res => {
       let data = res.data.data.map(p => new House(p))
       setState('houses', data)

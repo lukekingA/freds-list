@@ -12,6 +12,7 @@ function draw() {
   <form onsubmit="app.controllers.houseController.addHouse(event)">
           <input type="number" name="year" placeholder=" year">
           <input type="number" name="price" placeholder="price">
+          <input type="number" name="levels" placeholder="levels">
           <input type="number" name="bedrooms" placeholder="bedrooms">
           <input type="number" name="bathrooms" placeholder="bathrooms">
           <input type="text" name="description" placeholder="description">
@@ -35,12 +36,12 @@ export default class HouseControler {
     e.preventDefault()
     let form = e.target
     let rawData = {
-
       price: form.price.value,
       year: form.year.value,
+      levels: form.levels.value,
       bedrooms: form.bedrooms.value,
       bathrooms: form.bathrooms.value,
-      imgUrl: form.imgUrl,
+      imgUrl: form.imgUrl.value,
       description: form.description.value
     }
     _hs.addHouse(rawData)

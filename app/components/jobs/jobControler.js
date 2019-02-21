@@ -11,6 +11,7 @@ function draw() {
   document.querySelector('#available-form').innerHTML = `
   <form onsubmit="app.controllers.jobController.addJob(event)">
           <input type="text" name="jobTitle" placeholder=" Job Title">
+          <input type="text" name="company" placeholder="company">
           <input type="number" name="rate" placeholder="rate">
           <input type="number" name="hours" placeholder="hours">
           <input type="text" name="description" placeholder="description">
@@ -26,7 +27,7 @@ export default class JobControler {
 
   }
 
-  deleteJob(type, id) {
+  deleteJob(id) {
     _js.deleteJob(id)
   }
 

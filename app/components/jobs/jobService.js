@@ -32,7 +32,7 @@ export default class Jobs {
   }
 
   addJob(data) {
-    apiJobs.post(data).then(res => {
+    apiJobs.post('', data).then(res => {
       this.getApiJobs()
     })
   }

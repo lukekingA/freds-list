@@ -38,7 +38,7 @@ export default class Cars {
     })
   }
 
-  getApiCars(url = '') {
+  getApiCars() {
     apiCars.get().then(res => {
       let data = res.data.data.map(p => new Car(p))
       setState('cars', data)

@@ -17,7 +17,7 @@ export default class Car {
         <div class="card-body">
           <h4 class="card-title">${this.year} ${this.make} ${this.model}</h4>
           <p class="card-text">
-            ${this.description} -- ${this.price}
+            ${this.description} -- ${this.price.toFixed(2)}
           </p>
           <button onclick=" app.controllers.carController.deleteCar('${this._id}')">delete</button>
         </div>
