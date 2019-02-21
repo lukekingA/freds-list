@@ -28,6 +28,10 @@ export default class CarControler {
     _cs.getApiCars()
   }
 
+  showForm(id) {
+    document.getElementById(id).hidden = false
+  }
+
   deleteCar(id) {
     _cs.deleteCar(id)
   }
@@ -46,6 +50,13 @@ export default class CarControler {
     }
     _cs.addCar(rawData)
     form.reset()
+  }
+
+  updateDesc(e) {
+    e.preventDefault()
+    let target = _cs.Cars.filter(c => c._id == e.target.id)[0]
+    target.description = e.target.description.value
+    _cs.updateDesc(target)
   }
 
   getCars() {

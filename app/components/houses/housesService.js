@@ -52,4 +52,10 @@ export default class Houses {
     })
   }
 
+  updateDesc(data) {
+    apiHouses.put(data._id, data).then(res => {
+      this.getApiHouses()
+    })
+  }
+
 }

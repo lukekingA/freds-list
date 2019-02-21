@@ -19,7 +19,14 @@ export default class Car {
           <p class="card-text">
             ${this.description} -- ${this.price.toFixed(2)}
           </p>
+          <div class="d-flex justify-content-between">
           <button onclick=" app.controllers.carController.deleteCar('${this._id}')">delete</button>
+          <i class="fas fa-edit" onclick="app.controllers.carController.showForm('${this._id}')"></i>
+          <form hidden onsubmit="app.controllers.carController.updateDesc(event)" id="${this._id}">
+            <input type="text" name="description" placeholder="New Description">
+            <button class="btn btn-sm" type="submit">Submit</button>
+          </form>
+          </div>
         </div>
       </div>`
   }

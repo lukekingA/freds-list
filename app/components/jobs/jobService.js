@@ -51,4 +51,10 @@ export default class Jobs {
     })
   }
 
+  updateDesc(data) {
+    apiJobs.put(data._id, data).then(res => {
+      this.getApiJobs()
+    })
+  }
+
 }

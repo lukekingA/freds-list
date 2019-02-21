@@ -19,7 +19,14 @@ export default class Job {
             ${this.description}
           </p>
           <p>${this.hours}hrs/day -- $${this.rate.toFixed(2)}/hr</p>
+          <div class="d-flex justify-content-between">
           <button onclick=" app.controllers.jobController.deleteJob('${this._id}')">delete</button>
+          <i class="fas fa-edit" onclick="app.controllers.jobController.showForm('${this._id}')"></i>
+          <form hidden onsubmit="app.controller.jobController.updateDesc(event)" id="${this._id}">
+            <input type="text" name="description" placeholder="New Description">
+            <button class="btn btn-sm" type="submit">Submit</button>
+          </form>
+          </div>
         </div>
       </div>`
   }

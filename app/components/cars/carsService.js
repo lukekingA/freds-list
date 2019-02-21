@@ -52,4 +52,9 @@ export default class Cars {
     })
   }
 
+  updateDesc(data) {
+    apiCars.put(data._id, data).then(res => {
+      this.getApiCars()
+    })
+  }
 }

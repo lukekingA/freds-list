@@ -29,6 +29,10 @@ export default class HouseControler {
 
   }
 
+  showForm(id) {
+    document.getElementById(id).hidden = false
+  }
+
   deleteHouse(id) {
     _hs.deleteHouse(id)
   }
@@ -50,6 +54,13 @@ export default class HouseControler {
 
   getHouses() {
     _hs.getApiHouses()
+  }
+
+  updateDesc(e) {
+    e.preventDefault()
+    let target = _hs.House.filter(c => c._id == e.target.id)[0]
+    target.description = e.target.description.value
+    _hs.updateDesc(target)
   }
 
 }

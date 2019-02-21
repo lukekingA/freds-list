@@ -21,7 +21,14 @@ export default class House {
           <p class="card-text">
             ${this.description} -- ${this.price.toFixed(2)}
           </p>
+          <div class="d-flex justify-content-between">
           <button onclick=" app.controllers.houseController.deleteHouse('${this._id}')">Delete</button>
+          <i class="fas fa-edit" onclick="app.controllers.houseController.showForm('${this._id}')"></i>
+          <form hidden onsubmit="app.controllers.houseController.updateDesc(event)" id="${this._id}">
+            <input type="text" name="description" placeholder="New Description">
+            <button class="btn btn-sm" type="submit">Submit</button>
+          </form>
+          </div>
         </div>
       </div>`
   }

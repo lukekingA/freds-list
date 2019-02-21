@@ -27,6 +27,10 @@ export default class JobControler {
 
   }
 
+  showForm(id) {
+    document.getElementById(id).hidden = false
+  }
+
   deleteJob(id) {
     _js.deleteJob(id)
   }
@@ -47,6 +51,13 @@ export default class JobControler {
   }
   getJobs() {
     _js.getApiJobs()
+  }
+
+  updateDesc(e) {
+    e.preventDefault()
+    let target = _js.Jobs.filter(c => c._id == e.target.id)[0]
+    target.description = e.target.description.value
+    _js.updateDesc(target)
   }
 
 }
