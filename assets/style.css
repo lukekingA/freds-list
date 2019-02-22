@@ -2,5 +2,5 @@ html,
 body {
   font-family: 'Pridi',
     serif;
-
+  background: linear-gradient(lightgrey, grey, lightgrey)
 }

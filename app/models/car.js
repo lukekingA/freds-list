@@ -13,11 +13,11 @@ export default class Car {
   getTemplate() {
     return `
    <div class="card col-12 col-sm-4">
-        <img class="card-img-top" src=${this.imgUrl} alt="Card image cap">
+        <img class="card-img-top mt-2" src=${this.imgUrl} alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title">${this.year} ${this.make} ${this.model}</h4>
           <p class="card-text">
-            ${this.description} -- ${this.price.toFixed(2)}
+            ${this.description} -- $${this.price.toFixed(2)}
           </p>
           <div class="d-flex justify-content-between">
           <button onclick=" app.controllers.carController.deleteCar('${this._id}')">delete</button>

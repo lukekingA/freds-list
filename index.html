@@ -22,24 +22,28 @@
         <p>Boise</p>
       </div>
     </header>
-    <section class="row">
-      <div class="col my-3">
-        <button onclick="app.controllers.carController.getCars()" class="btn btn-dark text-light mr-2">Cars</button>
-        <button onclick="app.controllers.jobController.getJobs()" class="btn btn-dark text-light mr-2">Jobs</button>
-        <button onclick="app.controllers.houseController.getHouses()" class="btn btn-dark text-light">Houses</button>
-      </div>
-    </section>
-    <section class="row w-100">
-      <div id="available-form" class="col my-3">
+    <div class="row">
+      <div class="col col-sm-10 offset-sm-1">
+        <section class="row">
+          <div class="col my-3">
+            <button onclick="app.controllers.carController.getCars()" class="btn btn-dark text-light mr-2">Cars</button>
+            <button onclick="app.controllers.jobController.getJobs()" class="btn btn-dark text-light mr-2">Jobs</button>
+            <button onclick="app.controllers.houseController.getHouses()" class="btn btn-dark text-light">Houses</button>
+          </div>
+        </section>
+        <section class="row w-100">
+          <div id="available-form" class="col my-3">
 
-      </div>
-    </section>
-    <main class="row">
-      <div id="app" class="col">
-        <div class="row" id="available-items"></div>
+          </div>
+        </section>
+        <main class="row">
+          <div id="app" class="col">
+            <div class="row" id="available-items"></div>
 
+          </div>
+        </main>
       </div>
-    </main>
+    </div>
     <footer class="row w-100">
       <div class="col"></div>
     </footer>

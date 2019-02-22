@@ -10,12 +10,12 @@ function draw() {
 
   document.querySelector('#available-form').innerHTML = `
   <form onsubmit="app.controllers.jobController.addJob(event)">
-          <input type="text" name="jobTitle" placeholder=" Job Title">
-          <input type="text" name="company" placeholder="company">
-          <input type="number" name="rate" placeholder="rate">
-          <input type="number" name="hours" placeholder="hours">
-          <input type="text" name="description" placeholder="description">
-          <button type="submit">Submit</button>
+          <input class="mr-1 my-1 rounded" type="text" name="jobTitle" placeholder=" Job Title">
+          <input class="mr-1 my-1 rounded" type="text" name="company" placeholder="company">
+          <input class="mr-1 my-1 rounded" type="number" name="rate" placeholder="rate">
+          <input class="mr-1 my-1 rounded" type="number" name="hours" placeholder="hours">
+          <input class="mr-1 my-1 rounded" type="text" name="description" placeholder="description">
+          <button class="btn btn-dark btn-sm text-light my-1" type="submit">Submit</button>
         </form>`
 }
 
